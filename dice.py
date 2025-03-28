@@ -9,7 +9,6 @@ def roll_dice(dice_roll_number, numbers:list):
             num_fives += 1
 
     remaining_dice = dice_roll_number - num_fives
-    #print(f"Number of dice remaining is: {remaining_dice}\n")
 
     # Check for three trailing ones in the numbers list
     if len(numbers) >= 3 and numbers[-3:] == [1,1,1]:
@@ -31,6 +30,7 @@ def print_results():
         roll_dice(dice_roll_number, numbers)
         number_of_points = len(numbers)
         with open("Exponential decay points.txt", "a") as file:
-            file.write(f"{number_of_points}: {numbers}\n")
-
+            file.write(f"{number_of_points}: {numbers}\n") # this stores the number of points and the points
+            #Uncomment bellow and comment above to store only the number of points
+            # file.write(f"{number_of_points}\n") # this stores the number of points only
 print_results()
