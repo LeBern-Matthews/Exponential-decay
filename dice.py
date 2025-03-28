@@ -9,7 +9,11 @@ def roll_dice(dice_roll_number, numbers:list):
             num_fives += 1
 
     remaining_dice = dice_roll_number - num_fives
-    print(f"Number of dice remaining is: {remaining_dice}\n")
+    #print(f"Number of dice remaining is: {remaining_dice}\n")
+
+    # Check for three trailing ones in the numbers list
+    if len(numbers) >= 3 and numbers[-3:] == [1,1,1]:
+        return 0
 
     # Base case to terminate recursion
     if remaining_dice <= 0:
