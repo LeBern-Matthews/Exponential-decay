@@ -22,7 +22,7 @@ def roll_dice(dice_roll_number, numbers:list):
         return roll_dice(remaining_dice, numbers)
 
 def print_results():
-    higher_end = int(input("Enter the higher end of the range: "))
+    higher_end = int(input("Enter the amount of repetitions: "))
     for _ in range(0, higher_end):
         dice_roll_number = 100
         numbers = []  # Use a local variable instead of global
